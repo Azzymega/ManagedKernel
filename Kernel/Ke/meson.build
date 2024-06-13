@@ -1,0 +1,2 @@
+
+LibKe = files(['Entry.cpp'])

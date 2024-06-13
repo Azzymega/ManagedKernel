@@ -1,0 +1,18 @@
+[host_machine]
+system = 'none'
+cpu_family = 'riscv64'
+cpu = 'rv64imafdch'
+endian = 'little'
+
+[binaries]
+c = 'clang'
+cpp = 'clang++'
+ld = 'ld.lld'
+ar = 'llvm-ar'
+c_ld = 'lld'
+cpp_ld = 'lld'
+strip = 'llvm-strip'
+
+[built-in options]
+c_args = [ '-ffreestanding','--target=riscv64-unknown-linux-gnu','-mcmodel=medany','-nostdlib' ]
+cpp_args = [ '-ffreestanding','--target=riscv64-unknown-linux-gnu','-mcmodel=medany','-nostdlib' ]

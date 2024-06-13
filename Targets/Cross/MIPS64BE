@@ -1,0 +1,18 @@
+[host_machine]
+system = 'none'
+cpu_family = 'mips64'
+cpu = '4000'
+endian = 'big'
+
+[binaries]
+c = 'clang'
+cpp = 'clang++'
+ld = 'ld.lld'
+ar = 'llvm-ar'
+c_ld = 'lld'
+cpp_ld = 'lld'
+strip = 'llvm-strip'
+
+[built-in options]
+c_args = [ '-ffreestanding','-march=mips3','-mabi=32','--target=mips64','-nostdlib' ]
+cpp_args = [ '-ffreestanding','-march=mips3','-mabi=32','--target=mips64','-nostdlib' ]
